@@ -44,18 +44,21 @@ header h1 {
     font-weight: 200;
     font-size: 1.6rem;
     margin: 0;
+    animation: left-right 1000ms;
 }
 
 header h2 {
     font-weight: 600;
     font-size: 1.6rem;
     margin: 0;
+    animation: right-left 1000ms
 }
 
 header p {
     font-size: 1.05rem;
     color: var(--grayish-blue);
     margin-bottom: 70px;
+    animation: up-down 1000ms;
 }
 
 /*-------------------------Cards-container-----------------------------*/
@@ -63,6 +66,7 @@ header p {
     align-self: center;
     max-width: 500px;
     margin: 0 auto;
+    animation: down-up 1000ms;
 }
 
 .cards {
@@ -195,3 +199,54 @@ header p {
         height: 254px;
     }
 }
+
+/*-------------------------Animations-----------------------------*/
+
+@keyframes up-down {
+    0% {
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes down-up {
+    0% {
+        transform: translateY(500px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes left-right {
+    0% {
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes right-left {
+    0% {
+        transform: translateX(500px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
